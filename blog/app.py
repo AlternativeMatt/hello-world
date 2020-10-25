@@ -1,16 +1,21 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+blogs = dict()  # blog_name: Blog object
+MENU_PROMPT = "Enter 'c' to create a blog, 'l' to list blogs, 'r' to read one, 'p' to create a post,'q' to quit"
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def menu():
+
+    """
+    Show the user the available blogs
+    Let the user make a choice
+    Do something with that choice
+    Eventually exit
+    """
+
+    print_blogs()
+    selection = input(MENU_PROMPT)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+def print_blogs():
+    # print the available blogs
+    for key, blog in blogs.items():   # [(blog_name, Blog), (blog_name, Blog)]
+        print('- {}'.format(blog))
