@@ -11,6 +11,8 @@ class Blog:
         return '{} by {} ({} post{})'.format(self.title, self.author, len(self.posts),
                                              's' if len(self.posts) != 1 else '')
 
+#uuuuuu
+
     def create_post(self, title, content):
         self.posts.append(Post(title, content))
 
@@ -20,3 +22,5 @@ class Blog:
             'author': self.author,
             'posts': [post.json() for post in self.posts],
         }
+
+#aaaaaaaaaaa
